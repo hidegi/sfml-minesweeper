@@ -24,11 +24,7 @@ class Button : public sf::Drawable, public sf::Transformable
         void                        uncoverAdjacents();
         void                        flagging();
         void                        clearAdjacents();
-        void                        setContext(Context* p_context) {m_context = p_context;  std::cout << "set context.." << std::endl;
-                        if(!m_context)
-                                std::cout << "NULL context" << std::endl;
-                            if(!m_window)
-                            std::cout << "NULL window.." << std::endl;}
+        void                        setContext(Context* p_context) {m_context = p_context;}
         void                        update();
         void                        handleEvent(const sf::Event& event);
         void                        draw(sf::RenderTarget& target, sf::RenderStates states) const;
